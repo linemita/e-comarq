@@ -1,0 +1,70 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel productos masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$id_class}">{$label productos id}</th>
+			<th class="{$tipo_class}">{$label productos tipo}</th>
+			<th class="{$Observacion_class}">{$label productos Observacion}</th>
+			<th class="{$Precio_class}">{$label productos Precio}</th>
+			<th class="{$Exitencia_class}">{$label productos Exitencia}</th>
+			<th class="{$foto1_class}">{$label productos foto1}</th>
+			<th class="{$foto2_class}">{$label productos foto2}</th>
+			<th class="{$foto3_class}">{$label productos foto3}</th>
+			<th class="{$foto4_class}">{$label productos foto4}</th>
+			<th class="{$nombre_class}">{$label productos nombre}</th>
+			<th class="{$modelo_class}">{$label productos modelo}</th>
+			<th class="{$marca_class}">{$label productos marca}</th>
+			<th class="{$color_class}">{$label productos color}</th>
+			<th class="{$tama_o_class}">{$label productos tama_o}</th>
+			<th class="{$Categorias_id_class}">{$label productos Categorias_id}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$id_class}">{$id_mastervalue}</td>
+			<td class="{$tipo_class}">{$tipo_mastervalue}</td>
+			<td class="{$Observacion_class}">{$Observacion_mastervalue}</td>
+			<td class="{$Precio_class}">{$Precio_mastervalue}</td>
+			<td class="{$Exitencia_class}">{$Exitencia_mastervalue}</td>
+			<td class="{$foto1_class}">{$foto1_mastervalue}</td>
+			<td class="{$foto2_class}">{$foto2_mastervalue}</td>
+			<td class="{$foto3_class}">{$foto3_mastervalue}</td>
+			<td class="{$foto4_class}">{$foto4_mastervalue}</td>
+			<td class="{$nombre_class}">{$nombre_mastervalue}</td>
+			<td class="{$modelo_class}">{$modelo_mastervalue}</td>
+			<td class="{$marca_class}">{$marca_mastervalue}</td>
+			<td class="{$color_class}">{$color_mastervalue}</td>
+			<td class="{$tama_o_class}">{$tama_o_mastervalue}</td>
+			<td class="{$Categorias_id_class}">{$Categorias_id_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel tipopago print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN id_fieldheadercolumn}
+<th class="runner-cc {$id_class}" {$id_style}>
+	{BEGIN id_fieldheader}
+	<b>{$label tipopago id}</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN no_tarjeta_fieldheadercolumn}
+<th class="runner-cc {$no_tarjeta_class}" {$no_tarjeta_style}>
+	{BEGIN no_tarjeta_fieldheader}
+	<b>{$label tipopago no_tarjeta}</b>
+	{END no_tarjeta_fieldheader}
+</th>
+{END no_tarjeta_fieldheadercolumn}
+	{BEGIN TipoPago_fieldheadercolumn}
+<th class="runner-cc {$TipoPago_class}" {$TipoPago_style}>
+	{BEGIN TipoPago_fieldheader}
+	<b>{$label tipopago TipoPago}</b>
+	{END TipoPago_fieldheader}
+</th>
+{END TipoPago_fieldheadercolumn}
+	{BEGIN fechadevencimiento_fieldheadercolumn}
+<th class="runner-cc {$fechadevencimiento_class}" {$fechadevencimiento_style}>
+	{BEGIN fechadevencimiento_fieldheader}
+	<b>{$label tipopago fechadevencimiento}</b>
+	{END fechadevencimiento_fieldheader}
+</th>
+{END fechadevencimiento_fieldheadercolumn}
+	{BEGIN codverificacion_fieldheadercolumn}
+<th class="runner-cc {$codverificacion_class}" {$codverificacion_style}>
+	{BEGIN codverificacion_fieldheader}
+	<b>{$label tipopago codverificacion}</b>
+	{END codverificacion_fieldheader}
+</th>
+{END codverificacion_fieldheadercolumn}
+	{BEGIN fechanacimiento_fieldheadercolumn}
+<th class="runner-cc {$fechanacimiento_class}" {$fechanacimiento_style}>
+	{BEGIN fechanacimiento_fieldheader}
+	<b>{$label tipopago fechanacimiento}</b>
+	{END fechanacimiento_fieldheader}
+</th>
+{END fechanacimiento_fieldheadercolumn}
+	{BEGIN Usuario_id_fieldheadercolumn}
+<th class="runner-cc {$Usuario_id_class}" {$Usuario_id_style}>
+	{BEGIN Usuario_id_fieldheader}
+	<b>{$label tipopago Usuario_id}</b>
+	{END Usuario_id_fieldheader}
+</th>
+{END Usuario_id_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style} {$recordattrs}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN no_tarjeta_fieldcolumn}
+<td  class="runner-cc {$no_tarjeta_class}" {$no_tarjeta_style} {$recordattrs}>
+	{$no_tarjeta_value}
+</td>
+{END no_tarjeta_fieldcolumn}
+	{BEGIN TipoPago_fieldcolumn}
+<td  class="runner-cc {$TipoPago_class}" {$TipoPago_style} {$recordattrs}>
+	{$TipoPago_value}
+</td>
+{END TipoPago_fieldcolumn}
+	{BEGIN fechadevencimiento_fieldcolumn}
+<td  class="runner-cc {$fechadevencimiento_class}" {$fechadevencimiento_style} {$recordattrs}>
+	{$fechadevencimiento_value}
+</td>
+{END fechadevencimiento_fieldcolumn}
+	{BEGIN codverificacion_fieldcolumn}
+<td  class="runner-cc {$codverificacion_class}" {$codverificacion_style} {$recordattrs}>
+	{$codverificacion_value}
+</td>
+{END codverificacion_fieldcolumn}
+	{BEGIN fechanacimiento_fieldcolumn}
+<td  class="runner-cc {$fechanacimiento_class}" {$fechanacimiento_style} {$recordattrs}>
+	{$fechanacimiento_value}
+</td>
+{END fechanacimiento_fieldcolumn}
+	{BEGIN Usuario_id_fieldcolumn}
+<td  class="runner-cc {$Usuario_id_class}" {$Usuario_id_style} {$recordattrs}>
+	{$Usuario_id_value}
+</td>
+{END Usuario_id_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

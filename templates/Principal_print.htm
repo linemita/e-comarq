@@ -1,0 +1,224 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel Principal print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN tipo_fieldheadercolumn}
+<th class="runner-cc {$tipo_class}" {$tipo_style}>
+	{BEGIN tipo_fieldheader}
+	<b>{$label Principal tipo}</b>
+	{END tipo_fieldheader}
+</th>
+{END tipo_fieldheadercolumn}
+	{BEGIN Precio_fieldheadercolumn}
+<th class="runner-cc {$Precio_class}" {$Precio_style}>
+	{BEGIN Precio_fieldheader}
+	<b>{$label Principal Precio}</b>
+	{END Precio_fieldheader}
+</th>
+{END Precio_fieldheadercolumn}
+	{BEGIN foto1_fieldheadercolumn}
+<th class="runner-cc {$foto1_class}" {$foto1_style}>
+	{BEGIN foto1_fieldheader}
+	<b>{$label Principal foto1}</b>
+	{END foto1_fieldheader}
+</th>
+{END foto1_fieldheadercolumn}
+	{BEGIN nombre_fieldheadercolumn}
+<th class="runner-cc {$nombre_class}" {$nombre_style}>
+	{BEGIN nombre_fieldheader}
+	<b>{$label Principal nombre}</b>
+	{END nombre_fieldheader}
+</th>
+{END nombre_fieldheadercolumn}
+	{BEGIN modelo_fieldheadercolumn}
+<th class="runner-cc {$modelo_class}" {$modelo_style}>
+	{BEGIN modelo_fieldheader}
+	<b>{$label Principal modelo}</b>
+	{END modelo_fieldheader}
+</th>
+{END modelo_fieldheadercolumn}
+	{BEGIN marca_fieldheadercolumn}
+<th class="runner-cc {$marca_class}" {$marca_style}>
+	{BEGIN marca_fieldheader}
+	<b>{$label Principal marca}</b>
+	{END marca_fieldheader}
+</th>
+{END marca_fieldheadercolumn}
+	{BEGIN Categorias_id_fieldheadercolumn}
+<th class="runner-cc {$Categorias_id_class}" {$Categorias_id_style}>
+	{BEGIN Categorias_id_fieldheader}
+	<b>{$label Principal Categorias_id}</b>
+	{END Categorias_id_fieldheader}
+</th>
+{END Categorias_id_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN tipo_fieldcolumn}
+<td  class="runner-cc {$tipo_class}" {$tipo_style} {$recordattrs}>
+	{$tipo_value}
+</td>
+{END tipo_fieldcolumn}
+	{BEGIN Precio_fieldcolumn}
+<td  class="runner-cc {$Precio_class}" {$Precio_style} {$recordattrs}>
+	{$Precio_value}
+</td>
+{END Precio_fieldcolumn}
+	{BEGIN foto1_fieldcolumn}
+<td  class="runner-cc {$foto1_class}" {$foto1_style} {$recordattrs}>
+	{$foto1_value}
+</td>
+{END foto1_fieldcolumn}
+	{BEGIN nombre_fieldcolumn}
+<td  class="runner-cc {$nombre_class}" {$nombre_style} {$recordattrs}>
+	{$nombre_value}
+</td>
+{END nombre_fieldcolumn}
+	{BEGIN modelo_fieldcolumn}
+<td  class="runner-cc {$modelo_class}" {$modelo_style} {$recordattrs}>
+	{$modelo_value}
+</td>
+{END modelo_fieldcolumn}
+	{BEGIN marca_fieldcolumn}
+<td  class="runner-cc {$marca_class}" {$marca_style} {$recordattrs}>
+	{$marca_value}
+</td>
+{END marca_fieldcolumn}
+	{BEGIN Categorias_id_fieldcolumn}
+<td  class="runner-cc {$Categorias_id_class}" {$Categorias_id_style} {$recordattrs}>
+	{$Categorias_id_value}
+</td>
+{END Categorias_id_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

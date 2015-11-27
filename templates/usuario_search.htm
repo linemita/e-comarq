@@ -1,0 +1,274 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_search}
+<div class="rnr-c rnr-cv rnr-c-search">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel usuario search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criterio:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> Todas las condiciones</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Ninguna condición</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NO</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_id}">
+	{BEGIN id_fieldblock}		
+	<td>
+		{$label usuario id}
+	</td>
+	<td>
+		<input type="checkbox" {$id_notbox}>
+	</td>
+	<td>
+		{$searchtype_id}
+	</td>
+	<td>
+		{$id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$id_editcontrol1}&nbsp;
+	</td>
+{END id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Nombres}">
+	{BEGIN Nombres_fieldblock}		
+	<td>
+		{$label usuario Nombres}
+	</td>
+	<td>
+		<input type="checkbox" {$Nombres_notbox}>
+	</td>
+	<td>
+		{$searchtype_Nombres}
+	</td>
+	<td>
+		{$Nombres_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Nombres_editcontrol1}&nbsp;
+	</td>
+{END Nombres_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Apellidos}">
+	{BEGIN Apellidos_fieldblock}		
+	<td>
+		{$label usuario Apellidos}
+	</td>
+	<td>
+		<input type="checkbox" {$Apellidos_notbox}>
+	</td>
+	<td>
+		{$searchtype_Apellidos}
+	</td>
+	<td>
+		{$Apellidos_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Apellidos_editcontrol1}&nbsp;
+	</td>
+{END Apellidos_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Telefono}">
+	{BEGIN Telefono_fieldblock}		
+	<td>
+		{$label usuario Telefono}
+	</td>
+	<td>
+		<input type="checkbox" {$Telefono_notbox}>
+	</td>
+	<td>
+		{$searchtype_Telefono}
+	</td>
+	<td>
+		{$Telefono_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Telefono_editcontrol1}&nbsp;
+	</td>
+{END Telefono_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Usuario}">
+	{BEGIN Usuario_fieldblock}		
+	<td>
+		{$label usuario Usuario}
+	</td>
+	<td>
+		<input type="checkbox" {$Usuario_notbox}>
+	</td>
+	<td>
+		{$searchtype_Usuario}
+	</td>
+	<td>
+		{$Usuario_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Usuario_editcontrol1}&nbsp;
+	</td>
+{END Usuario_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Password}">
+	{BEGIN Password_fieldblock}		
+	<td>
+		{$label usuario Password}
+	</td>
+	<td>
+		<input type="checkbox" {$Password_notbox}>
+	</td>
+	<td>
+		{$searchtype_Password}
+	</td>
+	<td>
+		{$Password_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Password_editcontrol1}&nbsp;
+	</td>
+{END Password_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Email}">
+	{BEGIN Email_fieldblock}		
+	<td>
+		{$label usuario Email}
+	</td>
+	<td>
+		<input type="checkbox" {$Email_notbox}>
+	</td>
+	<td>
+		{$searchtype_Email}
+	</td>
+	<td>
+		{$Email_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Email_editcontrol1}&nbsp;
+	</td>
+{END Email_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Rol}">
+	{BEGIN Rol_fieldblock}		
+	<td>
+		{$label usuario Rol}
+	</td>
+	<td>
+		<input type="checkbox" {$Rol_notbox}>
+	</td>
+	<td>
+		{$searchtype_Rol}
+	</td>
+	<td>
+		{$Rol_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Rol_editcontrol1}&nbsp;
+	</td>
+{END Rol_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Municipio_id}">
+	{BEGIN Municipio_id_fieldblock}		
+	<td>
+		{$label usuario Municipio_id}
+	</td>
+	<td>
+		<input type="checkbox" {$Municipio_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_Municipio_id}
+	</td>
+	<td>
+		{$Municipio_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Municipio_id_editcontrol1}&nbsp;
+	</td>
+{END Municipio_id_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Buscar</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reiniciar</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Volver a la lista</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_search}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

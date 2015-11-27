@@ -1,0 +1,179 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-register" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_register}
+<div class="rnr-c rnr-cv rnr-c-register">
+
+{BEGIN regheader}
+<div  class="rnr-brickcontents style2 rnr-b-regheader {$brickclass_regheader}"><span>	<h1>{$pagetitlelabel  register}</h1>
+</span></div>{END regheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-regfields {$brickclass_regfields}"><table class="fieldGrid register">
+	{BEGIN Usuario_fieldblock}
+<tr class="{$fielddispclass_Usuario}" data-fieldname="Usuario">
+	<td class="rnr-label">
+		{BEGIN Usuario_label}{$label usuario Usuario}{END Usuario_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Usuario_editcontrol}
+	</td>
+</tr>
+{END Usuario_fieldblock}
+	{BEGIN Password_fieldblock}
+<tr class="{$fielddispclass_Password}" data-fieldname="Password">
+	<td class="rnr-label">
+		{BEGIN Password_label}{$label usuario Password}{END Password_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Password_editcontrol}
+	</td>
+</tr>
+{END Password_fieldblock}
+	{BEGIN confirm_block}
+<tr class="{$fielddispclass_Password}" data-fieldname="Password">
+	<td class="rnr-label">
+		{BEGIN confirm_label}Re-escribir la contraseña{END confirm_label}
+	</td>
+	<td class="rnr-control style3">
+		{$confirm_editcontrol1}
+	</td>
+</tr>
+{END confirm_block}
+	{BEGIN Email_fieldblock}
+<tr class="{$fielddispclass_Email}" data-fieldname="Email">
+	<td class="rnr-label">
+		{BEGIN Email_label}{$label usuario Email}{END Email_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Email_editcontrol}
+	</td>
+</tr>
+{END Email_fieldblock}
+	{BEGIN Nombres_fieldblock}
+<tr class="{$fielddispclass_Nombres}" data-fieldname="Nombres">
+	<td class="rnr-label">
+		{BEGIN Nombres_label}{$label usuario Nombres}{END Nombres_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Nombres_editcontrol}
+	</td>
+</tr>
+{END Nombres_fieldblock}
+	{BEGIN Apellidos_fieldblock}
+<tr class="{$fielddispclass_Apellidos}" data-fieldname="Apellidos">
+	<td class="rnr-label">
+		{BEGIN Apellidos_label}{$label usuario Apellidos}{END Apellidos_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Apellidos_editcontrol}
+	</td>
+</tr>
+{END Apellidos_fieldblock}
+	{BEGIN Telefono_fieldblock}
+<tr class="{$fielddispclass_Telefono}" data-fieldname="Telefono">
+	<td class="rnr-label">
+		{BEGIN Telefono_label}{$label usuario Telefono}{END Telefono_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Telefono_editcontrol}
+	</td>
+</tr>
+{END Telefono_fieldblock}
+	{BEGIN Municipio_id_fieldblock}
+<tr class="{$fielddispclass_Municipio_id}" data-fieldname="Municipio_id">
+	<td class="rnr-label">
+		{BEGIN Municipio_id_label}{$label usuario Municipio_id}{END Municipio_id_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Municipio_id_editcontrol}
+	</td>
+</tr>
+{END Municipio_id_fieldblock}
+	{BEGIN Rol_fieldblock}
+<tr class="{$fielddispclass_Rol}" data-fieldname="Rol">
+	<td class="rnr-label">
+		{BEGIN Rol_label}{$label usuario Rol}{END Rol_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Rol_editcontrol}
+	</td>
+</tr>
+{END Rol_fieldblock}
+</table></div>
+
+
+{BEGIN regbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-regbuttons {$brickclass_regbuttons}"><div class="rnr-withsidelink">
+	<a href="#" class="rnr-button main" {$submit_attrs}>Registrar</a>
+	<a href="login.php" class="rnr-button link rnr-sidelink" {$backlink_attrs}>Regresar a la página de conexión</a>
+</div>
+
+</div>{END regbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_register}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

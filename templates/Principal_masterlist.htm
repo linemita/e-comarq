@@ -1,0 +1,57 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}">	<h1>{$pagetitlelabel Principal masterlist}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-mastergridfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$id_class}">{$label Principal id}</th>
+			<th class="{$tipo_class}">{$label Principal tipo}</th>
+			<th class="{$Precio_class}">{$label Principal Precio}</th>
+			<th class="{$foto1_class}">{$label Principal foto1}</th>
+			<th class="{$nombre_class}">{$label Principal nombre}</th>
+			<th class="{$modelo_class}">{$label Principal modelo}</th>
+			<th class="{$marca_class}">{$label Principal marca}</th>
+			<th class="{$Categorias_id_class}">{$label Principal Categorias_id}</th>
+			<th class="{$Usuario_id_class}">{$label Principal Usuario_id}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$id_class}">{$id_mastervalue}</td>
+			<td class="{$tipo_class}">{$tipo_mastervalue}</td>
+			<td class="{$Precio_class}">{$Precio_mastervalue}</td>
+			<td class="{$foto1_class}">{$foto1_mastervalue}</td>
+			<td class="{$nombre_class}">{$nombre_mastervalue}</td>
+			<td class="{$modelo_class}">{$modelo_mastervalue}</td>
+			<td class="{$marca_class}">{$marca_mastervalue}</td>
+			<td class="{$Categorias_id_class}">{$Categorias_id_mastervalue}</td>
+			<td class="{$Usuario_id_class}">{$Usuario_id_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

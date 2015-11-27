@@ -1,0 +1,217 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	<h1>{$pagetitlelabel productos add}</h1>
+</span></div>{END addheader}
+
+
+{BEGIN message_block}<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields {$brickclass_addfields}"><table class="fieldGrid">
+	{BEGIN tipo_fieldblock}<tr class="{$fielddispclass_tipo}" data-fieldname="tipo">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN tipo_label}{$label productos tipo}{END tipo_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$tipo_editcontrol}&nbsp;
+	</td>
+</tr>
+{END tipo_fieldblock}
+	{BEGIN Observacion_fieldblock}<tr class="{$fielddispclass_Observacion}" data-fieldname="Observacion">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN Observacion_label}{$label productos Observacion}{END Observacion_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$Observacion_editcontrol}&nbsp;
+	</td>
+</tr>
+{END Observacion_fieldblock}
+	{BEGIN Precio_fieldblock}<tr class="{$fielddispclass_Precio}" data-fieldname="Precio">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN Precio_label}{$label productos Precio}{END Precio_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Precio_editcontrol}&nbsp;
+	</td>
+</tr>
+{END Precio_fieldblock}
+	{BEGIN Exitencia_fieldblock}<tr class="{$fielddispclass_Exitencia}" data-fieldname="Exitencia">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN Exitencia_label}{$label productos Exitencia}{END Exitencia_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$Exitencia_editcontrol}&nbsp;
+	</td>
+</tr>
+{END Exitencia_fieldblock}
+	{BEGIN foto1_fieldblock}<tr class="{$fielddispclass_foto1}" data-fieldname="foto1">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN foto1_label}{$label productos foto1}{END foto1_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$foto1_editcontrol}&nbsp;
+	</td>
+</tr>
+{END foto1_fieldblock}
+	{BEGIN foto2_fieldblock}<tr class="{$fielddispclass_foto2}" data-fieldname="foto2">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN foto2_label}{$label productos foto2}{END foto2_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$foto2_editcontrol}&nbsp;
+	</td>
+</tr>
+{END foto2_fieldblock}
+	{BEGIN foto3_fieldblock}<tr class="{$fielddispclass_foto3}" data-fieldname="foto3">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN foto3_label}{$label productos foto3}{END foto3_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$foto3_editcontrol}&nbsp;
+	</td>
+</tr>
+{END foto3_fieldblock}
+	{BEGIN foto4_fieldblock}<tr class="{$fielddispclass_foto4}" data-fieldname="foto4">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN foto4_label}{$label productos foto4}{END foto4_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$foto4_editcontrol}&nbsp;
+	</td>
+</tr>
+{END foto4_fieldblock}
+	{BEGIN nombre_fieldblock}<tr class="{$fielddispclass_nombre}" data-fieldname="nombre">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN nombre_label}{$label productos nombre}{END nombre_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$nombre_editcontrol}&nbsp;
+	</td>
+</tr>
+{END nombre_fieldblock}
+	{BEGIN modelo_fieldblock}<tr class="{$fielddispclass_modelo}" data-fieldname="modelo">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN modelo_label}{$label productos modelo}{END modelo_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$modelo_editcontrol}&nbsp;
+	</td>
+</tr>
+{END modelo_fieldblock}
+	{BEGIN marca_fieldblock}<tr class="{$fielddispclass_marca}" data-fieldname="marca">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN marca_label}{$label productos marca}{END marca_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$marca_editcontrol}&nbsp;
+	</td>
+</tr>
+{END marca_fieldblock}
+	{BEGIN color_fieldblock}<tr class="{$fielddispclass_color}" data-fieldname="color">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN color_label}{$label productos color}{END color_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$color_editcontrol}&nbsp;
+	</td>
+</tr>
+{END color_fieldblock}
+	{BEGIN tama_o_fieldblock}<tr class="{$fielddispclass_tama_o}" data-fieldname="tama_o">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN tama_o_label}{$label productos tama_o}{END tama_o_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$tama_o_editcontrol}&nbsp;
+	</td>
+</tr>
+{END tama_o_fieldblock}
+	{BEGIN Categorias_id_fieldblock}<tr class="{$fielddispclass_Categorias_id}" data-fieldname="Categorias_id">
+	<TD class="rnr-label" rowspan="1" colspan="1">{BEGIN Categorias_id_label}{$label productos Categorias_id}{END Categorias_id_label}
+	</td>
+	<TD class="rnr-control style3" rowspan="1" colspan="1">
+      {$Categorias_id_editcontrol}&nbsp;
+	</td>
+</tr>
+{END Categorias_id_fieldblock}
+	{BEGIN Usuario_id_fieldblock}<tr class="{$fielddispclass_Usuario_id}" data-fieldname="Usuario_id">
+	<td class="rnr-label">
+		{BEGIN Usuario_id_label}{$label productos Usuario_id}{END Usuario_id_label}
+	</td>
+	<td class="rnr-control style3">
+		{$Usuario_id_editcontrol}&nbsp;
+	</td>
+</tr>
+{END Usuario_id_fieldblock}
+</table></div>
+
+
+{BEGIN addbuttons}<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}<a href="#" class="rnr-button main" id="saveButton{$id}">Guardar</a>
+{END save_button}
+{BEGIN reset_button}<a href="#" class="rnr-button" id="resetButton{$id}">Reiniciar</a>
+{END reset_button}
+{BEGIN cancel_button}<a href="#" class="rnr-button" id="cancelButton{$id}">Cancelar</a>
+{END cancel_button}
+{BEGIN back_button}<a href="#" class="rnr-button" id="backButton{$id}">Volver a la lista</a>
+{END back_button}
+{BEGIN backToMenu_button}<a href="#" class="rnr-button" id="backToMenuButton{$id}">Regresar al menú</a>
+{END backToMenu_button}</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
